@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the background color -->
+    <item android:drawable="@android:color/white" />
+
+    <!-- Define the image with transparency on top -->
+    <item>
+        <bitmap
+            android:src="@drawable/img_11"/>
+    </item>
+</layer-list>

@@ -1,0 +1,352 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/buyer_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#659249">
+
+    <!-- Top Column Text -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="29dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maayong Adlaw"
+            android:fontFamily="@font/maragsa_display"
+            android:textColor="#f8f8f8"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grace Farm"
+            android:textColor="#ffd600"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Top Row Boxes -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="95dp"
+        android:background="#f5f5f5"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Horizontal scrollable view -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                    <!-- First button -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="69dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Second button -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="69dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Third button -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="69dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Fourth button -->
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="69dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="323dp"
+                android:layout_height="1dp"
+                android:background="#003d0d" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Featured text aligned to the left and expands to take remaining space -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/featured_label"
+                    android:fontFamily="@font/league_spartan_bold"
+                    android:textColor="#391713"
+                    android:textSize="18sp" />
+
+                <!-- Right-aligned View All text and image -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="View All"
+                    android:textColor="#585a00"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/gold_next_icon" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:weightSum="4"
+                android:padding="16dp">
+
+                <!-- First Box -->
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1">
+
+                    <!-- Image inside the box -->
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="76dp"
+                        android:layout_height="99dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/sample_veg"
+                        android:scaleType="fitXY"
+                        android:clipToOutline="true"
+                        android:background="@drawable/rounded_corner_shape"/>
+
+                    <!-- Frame10 (Price Tag) -->
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="84dp"
+                        android:backgroundTint="#42ad00"
+                        android:background="@drawable/price_corner"
+                        android:text="Price"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <!-- Second Box -->
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="76dp"
+                        android:layout_height="99dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/sample_veg"
+                        android:scaleType="fitXY"
+                        android:clipToOutline="true"
+                        android:background="@drawable/rounded_corner_shape"/>
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="84dp"
+                        android:backgroundTint="#42ad00"
+                        android:background="@drawable/price_corner"
+                        android:text="Price"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <!-- Third Box -->
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="76dp"
+                        android:layout_height="99dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/sample_veg"
+                        android:scaleType="fitXY"
+                        android:clipToOutline="true"
+                        android:background="@drawable/rounded_corner_shape"/>
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="84dp"
+                        android:backgroundTint="#42ad00"
+                        android:background="@drawable/price_corner"
+                        android:text="Price"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+                <!-- Fourth Box -->
+                <RelativeLayout
+                    android:layout_width="76dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="76dp"
+                        android:layout_height="99dp"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/sample_veg"
+                        android:scaleType="fitXY"
+                        android:clipToOutline="true"
+                        android:background="@drawable/rounded_corner_shape"/>
+
+                    <TextView
+                        android:layout_width="38dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="38dp"
+                        android:layout_marginTop="84dp"
+                        android:backgroundTint="#42ad00"
+                        android:background="@drawable/price_corner"
+                        android:text="Price"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/featuredslider"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:iss_auto_cycle="true"
+                app:iss_period="3000"
+                app:iss_placeholder="@color/buyer_color"
+                app:iss_error_image="@color/farmer_color"
+                app:iss_corner_radius="20"
+                android:layout_margin="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended"
+                    android:fontFamily="@font/league_spartan_bold"
+                    android:textColor="#391713"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!-- Horizontal scrollable view -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <!-- First button -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Second button -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Third button -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+
+                    <!-- Fourth button -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:clipToOutline="true" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+

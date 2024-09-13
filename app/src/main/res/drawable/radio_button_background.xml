@@ -1,0 +1,17 @@
+<!-- res/drawable/radio_button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background when checked -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/farmer_color" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- Background when unchecked -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/buyer_color" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</selector>
