@@ -35,290 +35,297 @@
         </LinearLayout>
 
         <!-- Scrollable Background Box -->
-        <ScrollView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/back_container"
-            android:layout_above="@id/sign_up_button"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="24dp"
+            android:layout_above="@id/sign_up_button"
             android:background="@drawable/rounded_white_box"
-            android:clipToOutline="true"
-            android:paddingVertical="16dp"
-            android:fillViewport="true">
+            android:clipToOutline="true">
+
+            <!-- ScrollView with PNG background -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/signin_bg"
+                android:paddingVertical="16dp"
+                android:fillViewport="true" >
 
                 <LinearLayout
                     android:id="@+id/background_box"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingVertical="10dp"
-                    android:paddingHorizontal="20dp">
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp">
 
-                        <TextView
-                            android:id="@+id/grace_farm_text"
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/umahan_link"
-                            android:textAllCaps="true"
-                            android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/greentext"
-                            android:textSize="25sp" />
+                    <TextView
+                        android:id="@+id/grace_farm_text"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/umahan_link"
+                        android:textAllCaps="true"
+                        android:textColor="@color/darkgreen"
+                        android:textSize="25sp" />
 
-                        <TextView
-                            android:id="@+id/description_text"
+                    <TextView
+                        android:id="@+id/description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/bdescrip"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+
+                    <!-- Email Input Section -->
+                    <TextView
+                        android:id="@+id/email_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/maragsa_display"
+                        android:paddingVertical="5dp"
+                        android:text="@string/email_label"
+                        android:textColor="#391713"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/green_input_fields"
+                        android:hint="@string/defaultemail"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="7dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <!-- Password Input Section -->
+                    <TextView
+                        android:id="@+id/password_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/maragsa_display"
+                        android:paddingVertical="5dp"
+                        android:text="@string/password_label"
+                        android:textColor="#391713"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/green_input_fields"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="7dp"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <!-- Name Input Section -->
+                    <TextView
+                        android:id="@+id/name_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:paddingVertical="5dp"
+                        android:text="@string/name_label"
+                        android:textColor="#391713"
+                        android:textSize="13sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginVertical="10dp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:text="@string/bdescrip"
-                            android:textColor="@color/black"
-                            android:textSize="11sp" />
+                            android:orientation="horizontal">
 
-                        <!-- Email Input Section -->
-                        <TextView
-                            android:id="@+id/email_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="@font/maragsa_display"
-                            android:paddingVertical="5dp"
-                            android:text="@string/email_label"
-                            android:textColor="#391713"
-                            android:textSize="18sp" />
+                            <EditText
+                                android:id="@+id/first_name_input"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/offwhite_input_fields"
+                                android:hint="@string/first_name"
+                                android:padding="7dp"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                tools:ignore="TouchTargetSizeCheck" />
 
-                        <EditText
-                            android:id="@+id/email_input"
+                            <EditText
+                                android:id="@+id/middle_name_input"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/offwhite_input_fields"
+                                android:hint="@string/middle_name"
+                                android:padding="7dp"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/green_input_fields"
-                            android:hint="@string/defaultemail"
-                            android:importantForAutofill="no"
-                            android:inputType="textEmailAddress"
-                            android:padding="7dp"
-                            android:paddingStart="15dp"
-                            android:paddingEnd="15dp"
-                            android:textColor="#000000"
-                            android:textSize="15sp"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
 
-                        <!-- Password Input Section -->
+                            <EditText
+                                android:id="@+id/last_name_input"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/offwhite_input_fields"
+                                android:hint="@string/last_name"
+                                android:padding="7dp"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+
+                            <EditText
+                                android:id="@+id/suffix_input"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/offwhite_input_fields"
+                                android:hint="@string/suffix"
+                                android:padding="7dp"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:textColor="#000000"
+                                android:textSize="13sp"
+                                tools:ignore="TouchTargetSizeCheck" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Phone Number Input Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
                         <TextView
-                            android:id="@+id/password_label"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="@font/maragsa_display"
-                            android:paddingVertical="5dp"
-                            android:text="@string/password_label"
-                            android:textColor="#391713"
-                            android:textSize="18sp" />
-
-                        <EditText
-                            android:id="@+id/password_input"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/green_input_fields"
-                            android:hint="@string/password"
-                            android:inputType="textPassword"
-                            android:padding="7dp"
-                            android:paddingStart="15dp"
-                            android:paddingEnd="15dp"
-                            android:textColor="#000000"
-                            android:textSize="15sp"
-                            tools:ignore="TouchTargetSizeCheck" />
-
-                        <!-- Name Input Section -->
-                        <TextView
-                            android:id="@+id/name_label"
+                            android:id="@+id/phone_label"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
                             android:fontFamily="@font/poppins_regular"
                             android:paddingVertical="5dp"
-                            android:text="@string/name_label"
+                            android:text="@string/phone_number"
                             android:textColor="#391713"
                             android:textSize="13sp" />
 
-                        <LinearLayout
+                        <EditText
+                            android:id="@+id/phone_number_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:background="@drawable/offwhite_input_fields"
+                            android:hint="@string/sample_contact_no"
+                            android:padding="7dp"
+                            android:paddingStart="15dp"
+                            android:paddingEnd="15dp"
+                            android:textColor="#000000"
+                            android:textSize="13sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                    <!-- Account Category Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                                        <EditText
-                                            android:id="@+id/first_name_input"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="5dp"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/offwhite_input_fields"
-                                            android:hint="@string/first_name"
-                                            android:padding="7dp"
-                                            android:paddingStart="15dp"
-                                            android:paddingEnd="15dp"
-                                            android:textColor="#000000"
-                                            android:textSize="13sp"
-                                            tools:ignore="TouchTargetSizeCheck" />
+                        <TextView
+                            android:id="@+id/acc_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:paddingVertical="5dp"
+                            android:text="@string/ques"
+                            android:textColor="#391713"
+                            android:textSize="13sp" />
 
-                                        <EditText
-                                            android:id="@+id/middle_name_input"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="5dp"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/offwhite_input_fields"
-                                            android:hint="@string/middle_name"
-                                            android:padding="7dp"
-                                            android:paddingStart="15dp"
-                                            android:paddingEnd="15dp"
-                                            android:textColor="#000000"
-                                            android:textSize="13sp"
-                                            tools:ignore="TouchTargetSizeCheck" />
-                                </LinearLayout>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="5dp"
-                                    android:orientation="horizontal">
-
-                                        <EditText
-                                            android:id="@+id/last_name_input"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="5dp"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/offwhite_input_fields"
-                                            android:hint="@string/last_name"
-                                            android:padding="7dp"
-                                            android:paddingStart="15dp"
-                                            android:paddingEnd="15dp"
-                                            android:textColor="#000000"
-                                            android:textSize="13sp"
-                                            tools:ignore="TouchTargetSizeCheck" />
-
-                                        <EditText
-                                            android:id="@+id/suffix_input"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginStart="5dp"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/offwhite_input_fields"
-                                            android:hint="@string/suffix"
-                                            android:padding="7dp"
-                                            android:paddingStart="15dp"
-                                            android:paddingEnd="15dp"
-                                            android:textColor="#000000"
-                                            android:textSize="13sp"
-                                            tools:ignore="TouchTargetSizeCheck" />
-                                </LinearLayout>
-                        </LinearLayout>
-
-                        <!-- Phone Number Input Section -->
-                        <LinearLayout
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/radio_group_background"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
 
-                                <TextView
-                                    android:id="@+id/phone_label"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="15dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:paddingVertical="5dp"
-                                    android:text="@string/phone_number"
-                                    android:textColor="#391713"
-                                    android:textSize="13sp" />
+                            <RadioButton
+                                android:id="@+id/farmerOption"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_button_background"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="Farmer"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
 
-                                <EditText
-                                    android:id="@+id/phone_number_input"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/offwhite_input_fields"
-                                    android:hint="@string/sample_contact_no"
-                                    android:padding="7dp"
-                                    android:paddingStart="15dp"
-                                    android:paddingEnd="15dp"
-                                    android:textColor="#000000"
-                                    android:textSize="13sp"
-                                    tools:ignore="TouchTargetSizeCheck" />
-                        </LinearLayout>
+                            <RadioButton
+                                android:id="@+id/buyerOption"
+                                android:layout_width="0dp"
+                                android:layout_height="35dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_button_background"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="Buyer"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                tools:ignore="TouchTargetSizeCheck" />
 
-                        <!-- Account Category Section -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        </RadioGroup>
+
+                        <TextView
+                            android:id="@+id/change_text"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/acc_category"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="15dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:paddingVertical="5dp"
-                                    android:text="@string/ques"
-                                    android:textColor="#391713"
-                                    android:textSize="13sp" />
-
-
-                                <RadioGroup
-                                    android:id="@+id/radioGroup"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerVertical="true"
-                                    android:background="@drawable/radio_group_background"
-                                    android:padding="5dp"
-                                    android:orientation="horizontal">
-
-                                        <RadioButton
-                                            android:id="@+id/farmerOption"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/radio_button_background"
-                                            android:button="@null"
-                                            android:text="Farmer"
-                                            android:textColor="@color/white"
-                                            android:textSize="14sp"
-                                            android:gravity="center"
-                                            tools:ignore="TouchTargetSizeCheck" />
-
-                                        <RadioButton
-                                            android:id="@+id/buyerOption"
-                                            android:layout_width="0dp"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:background="@drawable/radio_button_background"
-                                            android:button="@null"
-                                            android:text="Buyer"
-                                            android:textColor="@color/white"
-                                            android:textSize="14sp"
-                                            android:gravity="center"
-                                            tools:ignore="TouchTargetSizeCheck" />
-
-                                </RadioGroup>
-
-                                <TextView
-                                    android:id="@+id/change_text"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="right"
-                                    android:layout_marginTop="5dp"
-                                    android:fontFamily="@font/poppins_regular"
-                                    android:text="@string/change"
-                                    android:textColor="#391713"
-                                    android:textSize="10sp" />
-                        </LinearLayout>
+                            android:layout_gravity="right"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/change"
+                            android:textColor="#391713"
+                            android:textSize="10sp" />
+                    </LinearLayout>
                 </LinearLayout>
-        </ScrollView>
+            </ScrollView>
+        </FrameLayout>
 
         <!-- Sign Up Button -->
         <Button
@@ -331,4 +338,7 @@
             android:text="@string/sign_up"
             android:textColor="#FFFFFF"
             tools:ignore="TouchTargetSizeCheck" />
+
+
+
 </RelativeLayout>

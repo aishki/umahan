@@ -5,6 +5,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#659249">
 
+<!-- nav bar -->
+    <!-- Buttons -->
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/buyer_color"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <Button
+            android:id="@+id/go_to_article"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Feed full" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/next_feed"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <Button
+                android:id="@+id/share_feed"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="share" />
+
+            <Button
+                android:id="@+id/delete_feed"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="delete" />
+
+            <Button
+                android:id="@+id/prev_feed"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- ~Buttons -->
+
+
     <!-- Top Column Text -->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -36,8 +91,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_marginTop="95dp"
-        android:background="#f5f5f5"
-        android:padding="16dp">
+        android:background="@drawable/home_white_bg"
+        android:padding="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,6 +104,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/featured_label"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -274,29 +330,7 @@
                 app:iss_placeholder="@color/buyer_color"
                 app:iss_error_image="@color/farmer_color"
                 app:iss_corner_radius="20"
-                android:layout_margin="16dp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/recommended"
-                    android:fontFamily="@font/league_spartan_bold"
-                    android:textColor="#391713"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-
-            <!-- Horizontal scrollable view -->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none">
+                android:layout_margin="16dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -337,16 +371,32 @@
                         android:background="@drawable/rounded_corner_shape"
                         android:clipToOutline="true" />
                 </LinearLayout>
-            </HorizontalScrollView>
+            </com.denzcoskun.imageslider.ImageSlider>
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommended"
+                    android:fontFamily="@font/league_spartan_bold"
+                    android:textColor="#391713"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+            <!-- Horizontal scrollable view -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+            </HorizontalScrollView>
         </LinearLayout>
-
     </ScrollView>
 
-
 </RelativeLayout>
-
