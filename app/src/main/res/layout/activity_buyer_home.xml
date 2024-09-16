@@ -5,60 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#659249">
 
-<!-- nav bar -->
-    <!-- Buttons -->
-
-    <LinearLayout
-        android:id="@+id/bottom_layout"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:background="@color/buyer_color"
-        android:orientation="vertical"
-        android:paddingBottom="5dp" >
-
-        <Button
-            android:id="@+id/go_to_article"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Feed full" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <Button
-                android:id="@+id/next_feed"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-            <Button
-                android:id="@+id/share_feed"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text="share" />
-
-            <Button
-                android:id="@+id/delete_feed"
-                android:layout_width="100dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text="delete" />
-
-            <Button
-                android:id="@+id/prev_feed"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-        </LinearLayout>
-    </LinearLayout>
-    <!-- ~Buttons -->
-
 
     <!-- Top Column Text -->
     <LinearLayout
@@ -179,8 +125,8 @@
                     android:textSize="12sp" />
 
                 <ImageView
-                    android:layout_width="8dp"
-                    android:layout_height="13dp"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
                     android:layout_marginStart="2dp"
                     android:src="@drawable/gold_next_icon" />
             </LinearLayout>
@@ -399,4 +345,20 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- Content layout (above bottom nav) -->
+    <FrameLayout
+        android:id="@+id/nav_host_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_white_bg"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemBackground="@drawable/nav_item_background_selector"/>
 </RelativeLayout>

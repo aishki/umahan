@@ -6,6 +6,6 @@
     <!-- Define the image with transparency on top -->
     <item>
         <bitmap
-            android:src="@drawable/img_11"/>
+            android:src="@drawable/login_bg"/>
     </item>
 </layer-list>

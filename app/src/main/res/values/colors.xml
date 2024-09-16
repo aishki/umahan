@@ -9,5 +9,8 @@
     <color name="darkgreen">#276700</color>
     <color name="farmer_color">#FFB74D</color>
     <color name="buyer_color">#4CAF50</color>
+    <color name="button_bg">#5CA82E</color>
 
+    <color name="activeColor">#5CA82E</color>
+    <color name="inactiveColor">#808080</color> <!-- Example inactive color -->
 </resources>
