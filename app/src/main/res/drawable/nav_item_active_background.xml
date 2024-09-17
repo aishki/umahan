@@ -1,11 +1,17 @@
-<!-- res/drawable/bg_ellipse.xml -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-android:width="113dp"
-android:height="77dp"
-android:viewportWidth="113"
-android:viewportHeight="77">
+    android:width="55dp"
+    android:height="55dp"
+    android:viewportWidth="122"
+    android:viewportHeight="77"
+    android:scaleType="fitXY">
 
-<path
-    android:fillColor="#1C4701"
-    android:pathData="M112 0.06C89.7672 0.6159 110.578 77 61.0088 77 6.67284 77 38.0248 0.06 0 0.06 117.569 0.06 10.7854 0.06 54 0.06 77.0515 0.05988 117.39 -0.07487 112 0.06Z"/>
+    <!-- First path (the green ellipse) -->
+    <path
+        android:fillColor="#1C4701"
+        android:pathData="M112 0.06C89.7672 0.6159 110.578 77 61.0088 77 6.67284 77 38.0248 0.06 0 0.06 117.569 0.06 10.7854 0.06 54 0.06 77.0515 0.05988 117.39 -0.07487 112 0.06Z"/>
+
+    <!-- Second path (the white circle inside) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M90 39C90 53.9117 77.0163 66 61 66 44.9837 66 32 53.9117 32 39 32 24.0883 44.9837 12 61 12 77.0163 12 90 24.0883 90 39Z"/>
 </vector>

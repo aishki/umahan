@@ -10,6 +10,7 @@
     <string name="umahan_link">Umahan Link</string>
     <string name="bdescrip">Umahan Link helps farmers sell directly to businesses for fair prices and fresh produce. Sign in to manage your sales, explore products, and grow your farm business easily.</string>
     <string name="defaultemail">bellaesther@gmail.com</string>
+    <string name="defaultpassword">password</string>
     <string name="back_button">Back</string>
     <string name="email_label">Email:</string>
     <string name="password_label">Password:</string>

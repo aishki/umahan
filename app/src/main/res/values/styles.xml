@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/darkgreen</item>
+        <item name="colorAccent">@color/darkgreen</item>
+    </style>
+
+    <style name="BottomNavigationViewNoTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/darkgreen</item> <!-- No primary color affecting icons -->
+        <item name="colorOnPrimary">@color/darkgreen</item> <!-- Set this to ensure no purple tint -->
+        <item name="colorAccent">@color/darkgreen</item> <!-- Override accent to white -->
+    </style>
+
+
+
+</resources>

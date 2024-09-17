@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#659249">
 
-
     <!-- Top Column Text -->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -267,6 +266,7 @@
                 </RelativeLayout>
             </LinearLayout>
 
+    <!--Image Sliderr-->
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/featuredslider"
                 android:layout_width="match_parent"
@@ -278,47 +278,10 @@
                 app:iss_corner_radius="20"
                 android:layout_margin="16dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:paddingTop="16dp">
 
-                    <!-- First button -->
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="100dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
-
-                    <!-- Second button -->
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="100dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
-
-                    <!-- Third button -->
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="100dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
-
-                    <!-- Fourth button -->
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="100dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
-                </LinearLayout>
             </com.denzcoskun.imageslider.ImageSlider>
 
+            <!--Recommended Text-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -334,22 +297,115 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+            <!--Horizontal Recommended Display-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
 
-            <!-- Horizontal scrollable view -->
-            <HorizontalScrollView
+                <!-- First button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Second button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Third button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Fourth button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+            </LinearLayout>
+
+            <!--Farmer Text-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none">
+                android:orientation="horizontal"
+                android:gravity="start">
 
-            </HorizontalScrollView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/farmer"
+                    android:fontFamily="@font/league_spartan_bold"
+                    android:textColor="#391713"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--Horizontal Farmer Display-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <!-- First button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Second button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Third button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+
+                <!-- Fourth button -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToOutline="true" />
+            </LinearLayout>
+
+
+
         </LinearLayout>
     </ScrollView>
+
 
     <!-- Content layout (above bottom nav) -->
     <FrameLayout
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_above="@id/bottom_navigation" />
 
     <!-- Bottom Navigation Bar -->
@@ -358,7 +414,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/home_white_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@null"
+        android:theme="@style/BottomNavigationViewNoTheme"
         app:itemBackground="@drawable/nav_item_background_selector"/>
+
 </RelativeLayout>
