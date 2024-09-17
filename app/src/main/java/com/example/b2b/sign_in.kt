@@ -18,7 +18,7 @@ class SignIn : AppCompatActivity() {
         val buyerOption: RadioButton = findViewById(R.id.buyerOption)
         val farmerOption: RadioButton = findViewById(R.id.farmerOption)
 
-        // Set listener for the "Sign Up" button
+        // Sign Up Button listener
         signUpButton.setOnClickListener {
             // Check which radio button is selected
             val selectedId = radioGroup.checkedRadioButtonId
