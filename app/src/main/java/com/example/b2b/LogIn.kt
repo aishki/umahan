@@ -38,7 +38,7 @@ class LogIn : AppCompatActivity() {
             Log.i("Login Info", "Username: $username, Password: $password")
 
             // Navigate to the sign_in activity
-            val intent = Intent(this@LogIn, SignIn::class.java)
+            val intent = Intent(this@LogIn, SignUp::class.java)
             startActivity(intent)
         }
 
@@ -47,7 +47,7 @@ class LogIn : AppCompatActivity() {
         val signUpClickable = object : ClickableSpan() {
             override fun onClick(widget: View) {
                 // Navigate to the sign-in activity
-                val intent = Intent(this@LogIn, SignIn::class.java)
+                val intent = Intent(this@LogIn, SignUp::class.java)
                 startActivity(intent)
             }
         }

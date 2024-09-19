@@ -6,7 +6,7 @@ import android.text.InputType
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
-class SignIn : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
 
     private var isPasswordVisible = false
 
@@ -26,7 +26,6 @@ class SignIn : AppCompatActivity() {
 
         // Back Button Listener
         backButton.setOnClickListener {
-            // Navigate to the log-in activity
             val intent = Intent(this, LogIn::class.java)
             startActivity(intent)
         }
@@ -35,32 +34,22 @@ class SignIn : AppCompatActivity() {
         signUpButton.setOnClickListener {
             // Check active radio button
             val selectedId = radioGroup.checkedRadioButtonId
-
-            if (selectedId == buyerOption.id) {
-                // Start Buyer Home Activity
-                val intent = Intent(this, BuyerHome::class.java)
-                startActivity(intent)
-            } else if (selectedId == farmerOption.id) {
-                // Start Farmer Home Activity
-                val intent = Intent(this, FarmerHome::class.java)
-                startActivity(intent)
-            }
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("USER_TYPE", if (selectedId == buyerOption.id) "buyer" else "farmer")
+            startActivity(intent)
         }
 
-        // password visibility
+        // password visibility toggle
         eyeIcon.setOnClickListener {
             if (isPasswordVisible) {
-                // Hide password
                 passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                eyeIcon.setImageResource(R.drawable.ic_eye_closed) // closed eye icon
+                eyeIcon.setImageResource(R.drawable.ic_eye_closed)
             } else {
-                // Show password
                 passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                eyeIcon.setImageResource(R.drawable.ic_eye_open) // open eye icon
+                eyeIcon.setImageResource(R.drawable.ic_eye_open)
             }
-            // Move cursor to the end of the text
             passwordInput.setSelection(passwordInput.text.length)
-            isPasswordVisible = !isPasswordVisible //s visibility flag
+            isPasswordVisible = !isPasswordVisible
         }
     }
 }

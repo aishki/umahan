@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#659249"
-    tools:context=".BuyerHome">
+    tools:context=".BuyerHomeFragment">
 
     <!-- Top Column Text -->
     <LinearLayout
@@ -427,28 +427,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-
-    <!-- Content layout (above bottom nav) -->
-    <FrameLayout
-        android:id="@+id/nav_host_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_above="@id/bottom_navigation" />
-
-    <!-- Bottom Navigation Bar -->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemIconTint="@null"
-        android:theme="@style/BottomNavigationViewNoTheme"
-        app:itemBackground="@drawable/nav_item_background_selector"/>
 
 </RelativeLayout>
