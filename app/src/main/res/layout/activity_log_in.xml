@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".log_in">
+    tools:context=".LogIn">
 
     <!-- Background Image -->
     <ImageView
@@ -30,6 +30,7 @@
         android:orientation="vertical"
         android:layout_centerHorizontal="true">
 
+        <!-- Title Text -->
         <TextView
             android:id="@+id/title_text"
             android:layout_width="wrap_content"
@@ -40,7 +41,7 @@
             android:textColor="#216e00"
             android:textSize="40sp" />
 
-<!--Username-->
+        <!-- Username Input Field -->
         <LinearLayout
             android:id="@+id/username_container"
             android:layout_width="match_parent"
@@ -52,54 +53,58 @@
                 android:id="@+id/username_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:importantForAutofill="no"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/maragsa_display"
-                android:hint="@string/username"
+                android:fontFamily="@font/league_spartan_bold"
+                android:hint="@string/email_label"
                 android:inputType="text"
                 android:textColor="@color/goldtext"
                 android:textColorHint="@color/goldtext"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 tools:ignore="LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
 
-<!--Password-->
+        <!-- Password Input Field -->
         <LinearLayout
             android:id="@+id/password_container"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/input_fields_white"
-            android:layout_below="@id/username_container">
+            android:background="@drawable/input_fields_white">
 
             <EditText
                 android:id="@+id/password_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:importantForAutofill="no"
                 android:layout_gravity="center"
                 android:layout_marginStart="16dp"
                 android:background="@android:color/transparent"
-                android:fontFamily="@font/maragsa_display"
-                android:hint="@string/password"
+                android:fontFamily="@font/league_spartan_bold"
+                android:hint="@string/password_label"
                 android:inputType="textPassword"
                 android:textColor="@color/goldtext"
                 android:textColorHint="@color/goldtext"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 tools:ignore="LabelFor,TouchTargetSizeCheck" />
         </LinearLayout>
 
+        <!-- Forgot Password Text -->
         <TextView
             android:id="@+id/forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_gravity="right"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/league_spartan_reg"
             android:text="@string/forget_password"
             android:textColor="#f28300"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="RtlHardcoded" />
 
+        <!-- Log In Button -->
         <Button
             android:id="@+id/login_button"
             android:layout_width="170dp"
@@ -107,35 +112,24 @@
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
             android:backgroundTint="#42ad00"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/league_spartan_bold"
             android:text="@string/log_in"
             android:textColor="@android:color/white"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
+        <!-- Sign Up Text -->
         <TextView
             android:id="@+id/signup_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:layout_gravity="center"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="@font/league_spartan_reg"
             android:text="@string/don_t_have_an_account_sign_up"
             android:textAlignment="center"
-            android:textColor="#e95322"
-            android:textSize="14sp" />
+            android:textColor="@color/input_color"
+            android:textSize="14sp"
+            android:clickable="false"/>
 
     </LinearLayout>
-
-    <!-- Title Text -->
-
-    <!-- Username Input Field -->
-
-    <!-- Password Input Field -->
-
-    <!-- Forgot Password Text -->
-
-    <!-- Log In Button -->
-
-    <!-- Sign Up Text -->
-
 </RelativeLayout>

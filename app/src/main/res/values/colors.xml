@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="def">#9B9898</color>
+    <color name="login_input_color">#DFBB00</color>
     <color name="input_color">#391713</color>
     <color name="hint_color">#B3391713</color>
     <color name="colorE95322">#E95322</color>
@@ -11,7 +12,4 @@
     <color name="farmer_color">#FFB74D</color>
     <color name="buyer_color">#4CAF50</color>
     <color name="button_bg">#5CA82E</color>
-
-    <color name="activeColor">#5CA82E</color>
-    <color name="inactiveColor">#808080</color> <!-- Example inactive color -->
 </resources>

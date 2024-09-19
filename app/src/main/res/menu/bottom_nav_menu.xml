@@ -10,9 +10,9 @@
         android:title="Profile" />
 
     <item
-        android:id="@+id/shop"
-        android:icon="@drawable/ic_shop"
-        android:title="Shop" />
+        android:id="@+id/my_orders"
+        android:icon="@drawable/ic_my_orders"
+        android:title="My Orders" />
 
     <item
         android:id="@+id/chat"

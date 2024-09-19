@@ -1,9 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/buyer_home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#659249">
+    android:background="#659249"
+    tools:context=".BuyerHome">
 
     <!-- Top Column Text -->
     <LinearLayout
@@ -11,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="37dp"
-        android:layout_marginStart="29dp">
+        android:layout_marginStart="25dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,8 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    android:paddingBottom="16dp">
+                    android:orientation="horizontal">
 
                     <!-- First button -->
                     <ImageView
@@ -95,8 +96,9 @@
             <!-- Divider -->
             <View
                 android:layout_width="323dp"
-                android:layout_height="1dp"
-                android:background="#003d0d" />
+                android:layout_height="1.5dp"
+                android:background="#003d0d"
+                android:layout_marginTop="16dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -274,7 +276,7 @@
                 app:iss_auto_cycle="true"
                 app:iss_period="3000"
                 app:iss_placeholder="@color/buyer_color"
-                app:iss_error_image="@color/farmer_color"
+                app:iss_error_image="@color/buyer_color"
                 app:iss_corner_radius="20"
                 android:layout_margin="16dp">
 
