@@ -51,7 +51,7 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/featured_label"
+                android:contentDescription="@string/product_category"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -111,7 +111,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/featured_label"
+                    android:text="@string/reco_products"
                     android:fontFamily="@font/league_spartan_bold"
                     android:textColor="#391713"
                     android:textSize="18sp" />
@@ -132,8 +132,14 @@
                     android:src="@drawable/gold_next_icon" />
             </LinearLayout>
 
-            <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
+            <!-- Horizontal scrollable view -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/featured_products"
+                android:scrollbars="none">
+
+                <LinearLayout
                 android:layout_width="336dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -152,13 +158,14 @@
                     <!-- Image inside the box -->
                     <ImageView
                         android:id="@+id/imageView1"
-                        android:layout_width="76dp"
+                        android:layout_width="match_parent"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
-                        android:src="@drawable/sample_veg"
-                        android:scaleType="fitXY"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/rounded_corner_shape"
                         android:clipToOutline="true"
-                        android:background="@drawable/rounded_corner_shape"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sample_veg" />
 
                     <!-- Frame10 (Price Tag) -->
                     <TextView
@@ -267,6 +274,7 @@
                         android:gravity="center"/>
                 </RelativeLayout>
             </LinearLayout>
+            </HorizontalScrollView>
 
     <!--Image Sliderr-->
             <com.denzcoskun.imageslider.ImageSlider
@@ -300,7 +308,13 @@
             </LinearLayout>
 
             <!--Horizontal Recommended Display-->
-            <LinearLayout
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/reco_products"
+                android:scrollbars="none">
+
+                <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
@@ -339,6 +353,7 @@
                     android:background="@drawable/rounded_corner_shape"
                     android:clipToOutline="true" />
             </LinearLayout>
+            </HorizontalScrollView>
 
             <!--Farmer Text-->
             <LinearLayout
@@ -356,8 +371,18 @@
                     android:textSize="18sp" />
             </LinearLayout>
 
+
+
             <!--Horizontal Farmer Display-->
-            <LinearLayout
+
+            <!-- Horizontal scrollable view -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/farmer_profiles"
+                android:scrollbars="none">
+
+                <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
@@ -397,6 +422,7 @@
                     android:clipToOutline="true" />
             </LinearLayout>
 
+            </HorizontalScrollView>
 
 
         </LinearLayout>

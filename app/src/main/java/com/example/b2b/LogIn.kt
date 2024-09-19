@@ -34,7 +34,7 @@ class LogIn : AppCompatActivity() {
             val username = emailInput.text.toString()
             val password = passwordInput.text.toString()
 
-            // Log the credentials (for testing purposes)
+            // (for testing purposes)
             Log.i("Login Info", "Username: $username, Password: $password")
 
             // Navigate to the sign_in activity
@@ -68,3 +68,4 @@ class LogIn : AppCompatActivity() {
         signUpText.movementMethod = android.text.method.LinkMovementMethod.getInstance()
     }
 }
+

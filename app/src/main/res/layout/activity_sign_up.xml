@@ -137,7 +137,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:importantForAutofill="no"
-                            android:background="null"
+                            android:background="@android:color/transparent"
                             android:hint="@string/defaultpassword"
                             android:inputType="textPassword"
                             android:padding="7dp"

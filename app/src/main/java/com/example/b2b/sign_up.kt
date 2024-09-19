@@ -12,7 +12,7 @@ class SignIn : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_sign_up)
 
         val backButton: ImageView = findViewById(R.id.back_arrow)
         val signUpButton: Button = findViewById(R.id.sign_up_button)
