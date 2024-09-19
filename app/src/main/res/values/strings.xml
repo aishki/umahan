@@ -1,19 +1,17 @@
 <resources>
-    <string name="app_name">B2B</string>
-    <string name="username">Username:</string>
-    <string name="password">Password:</string>
+    <string name="app_name">Umahan</string>
     <string name="forget_password">Forgot Password?</string>
     <string name="log_in">Log In</string>
     <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
     <string name="bgimage">bgimage</string>
-    <string name="welcome_msg">Welcome to\nUmahan Link!</string>
+    <string name="welcome_msg">Welcome to\nUmahan!</string>
     <string name="umahan_link">Umahan Link</string>
     <string name="bdescrip">Umahan Link helps farmers sell directly to businesses for fair prices and fresh produce. Sign in to manage your sales, explore products, and grow your farm business easily.</string>
     <string name="defaultemail">bellaesther@gmail.com</string>
-    <string name="defaultpassword">password</string>
+    <string name="defaultpassword">••••••••</string>
     <string name="back_button">Back</string>
-    <string name="email_label">Email:</string>
-    <string name="password_label">Password:</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
     <string name="name_label">Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="ques">Are you a..</string>
@@ -29,4 +27,5 @@
     <string name="change">Click to change!</string>
     <string name="featured_label">Featured</string>
     <string name="recommended">Recommended</string>
+    <string name="my_orders">My Orders</string>
 </resources>
