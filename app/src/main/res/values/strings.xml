@@ -1,34 +1,71 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Umahan</string>
-    <string name="forget_password">Forgot Password?</string>
-    <string name="log_in">Log In</string>
-    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
-    <string name="bgimage">bgimage</string>
+
+    <!-- Welcome Message -->
     <string name="welcome_msg">Welcome to\nUmahan!</string>
-    <string name="umahan_link">Umahan Link</string>
-    <string name="bdescrip">Umahan Link helps farmers sell directly to businesses for fair prices and fresh produce. Sign in to manage your sales, explore products, and grow your farm business easily.</string>
+
+    <!-- Descriptions -->
+    <string name="umahan_link">Umahan</string>
+    <string name="bdescrip">Umahan helps farmers sell directly to businesses for fair prices and fresh produce. Sign in to manage your sales, explore products, and grow your farm business easily.</string>
+
+    <!-- Default Data -->
     <string name="defaultemail">bellaesther@gmail.com</string>
     <string name="defaultpassword">••••••••</string>
+
+    <!-- Button Labels -->
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
     <string name="back_button">Back</string>
+
+    <!-- Labels for Form Inputs -->
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
     <string name="name_label">Name</string>
     <string name="phone_number">Phone Number</string>
-    <string name="ques">Are you a..</string>
     <string name="suffix">Suffix</string>
     <string name="last_name">Last name</string>
     <string name="middle_name">Middle name</string>
     <string name="first_name">First name</string>
+
+    <!-- Placeholder Data -->
     <string name="sample_contact_no">(+639) 1231 2345</string>
-    <string name="sign_up">Sign Up</string>
+
+    <!-- Roles & Questions -->
+    <string name="ques">Are you a..</string>
     <string name="select">Select Role</string>
     <string name="farmer">Farmer</string>
     <string name="buyer">Buyer</string>
+
+    <!-- Links & Actions -->
+    <string name="forget_password">Forgot Password?</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
     <string name="change">Click to change!</string>
-    <string name="reco_products">Featured</string>
+
+    <!-- Screen Labels -->
+    <string name="bgimage">bgimage</string>
+
+    <!-- Home Screen Sections -->
+    <string name="reco_products">recommended_products</string>
     <string name="recommended">Recommended</string>
     <string name="my_orders">My Orders</string>
     <string name="featured_products">featured products\n</string>
     <string name="product_category">product category\n</string>
     <string name="farmer_profiles">farmer profiles</string>
+    <string name="maayong_adlaw">Maayong Adlaw</string>
+    <string name="view_all">View All</string>
+    <string name="price">Price</string>
+
+    <!--Product Category-->
+    <string name="category_a">category_a</string>
+    <string name="category_b">category_b</string>
+    <string name="category_c">category_c</string>
+    <string name="category_d">category_d</string>
+    <string name="category_e">category_e</string>
+    <string name="product">product</string>
+    <string name="fruits">Fruits</string>
+    <string name="vegetables">Vegetables</string>
+    <string name="seeds_n_beans">Seeds n\' Beans</string>
+    <string name="spices">Spices</string>
+    <string name="bundle">Bundle</string>
 </resources>

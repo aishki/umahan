@@ -1,9 +1,8 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="55dp"
-    android:height="55dp"
-    android:viewportWidth="122"
-    android:viewportHeight="77"
-    android:scaleType="fitXY">
+    android:width="113dp"
+    android:height="70dp"
+    android:viewportWidth="120"
+    android:viewportHeight="77">
 
     <!-- First path (the green ellipse) -->
     <path

@@ -3,6 +3,7 @@ package com.example.b2b
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,6 +15,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+
+// Iterate through the BottomNavigationView items
+        for (i in 0 until bottomNavigationView.childCount) {
+            val itemView = bottomNavigationView.getChildAt(i)
+
+            // Adjust the width of each item programmatically
+            val params = itemView.layoutParams as ViewGroup.LayoutParams
+            params.width = 500 // Set the desired width in pixels or convert dp to px
+            itemView.layoutParams = params
+        }
+
 
         if (savedInstanceState == null) {
             val userType = intent.getStringExtra("USER_TYPE")
@@ -47,6 +60,10 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.chat -> {
                     // loadFragment(BuyerChatFragment())
+                    true
+                }
+                R.id.cart -> {
+                    // loadFragment(BuyerCartFragment())
                     true
                 }
                 else -> false
