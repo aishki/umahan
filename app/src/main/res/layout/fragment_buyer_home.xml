@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Maayong Adlaw"
+            android:text="@string/maayong_adlaw"
             android:fontFamily="@font/maragsa_display"
             android:textColor="#f8f8f8"
             android:textSize="25sp" />
@@ -26,8 +26,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Grace Farm"
-            android:textColor="#ffd600"
+            android:text="@string/umahan_link"
+            android:textColor="@color/goldtext"
             android:textSize="13sp" />
 
     </LinearLayout>
@@ -39,7 +39,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="95dp"
         android:background="@drawable/home_white_bg"
-        android:padding="25dp">
+        android:paddingTop="25dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,47 +53,143 @@
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/product_category"
                 android:scrollbars="none">
 
                 <LinearLayout
+                    android:id="@+id/product_category"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
-                    <!-- First button -->
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="69dp"
+                    <!-- First category: Fruits -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
+                        android:orientation="vertical">
 
-                    <!-- Second button -->
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="69dp"
+                        <ImageView
+                            android:id="@+id/categoryAImageView"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@string/category_a"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/categoryATextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/fruits"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <!-- Second category: Vegetables -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
+                        android:orientation="vertical">
 
-                    <!-- Third button -->
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="69dp"
+                        <ImageView
+                            android:id="@+id/categoryBImageView"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@string/category_b"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/categoryBTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/vegetables"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <!-- Third category: Seeds and Beans -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_marginEnd="16dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
+                        android:orientation="vertical">
 
-                    <!-- Fourth button -->
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="69dp"
-                        android:background="@drawable/rounded_corner_shape"
-                        android:clipToOutline="true" />
+                        <ImageView
+                            android:id="@+id/categoryCImageView"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@string/category_c"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/categoryCTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/seeds_n_beans"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <!-- Fourth category: Spices -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/categoryDImageView"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@string/category_d"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/categoryDTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/spices"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+                    <!-- Fifth category: Bundle -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/categoryEImageView"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:contentDescription="@string/category_e"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/categoryETextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/bundle"
+                            android:textSize="13sp"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </HorizontalScrollView>
+
+
 
             <!-- Divider -->
             <View
@@ -111,7 +209,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/reco_products"
+                    android:text="@string/recommended"
                     android:fontFamily="@font/league_spartan_bold"
                     android:textColor="#391713"
                     android:textSize="18sp" />
@@ -121,7 +219,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="View All"
+                    android:text="@string/view_all"
                     android:textColor="#585a00"
                     android:textSize="12sp" />
 
@@ -129,7 +227,9 @@
                     android:layout_width="20dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="2dp"
-                    android:src="@drawable/gold_next_icon" />
+                    android:contentDescription="@string/view_all"
+                    android:src="@drawable/gold_next_icon"
+                    tools:ignore="ImageContrastCheck" />
             </LinearLayout>
 
             <!-- Horizontal scrollable view -->
@@ -140,13 +240,15 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                android:layout_width="336dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:weightSum="4"
-                android:padding="16dp">
+                    android:id="@+id/featured_products"
+                    android:layout_width="336dp"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:weightSum="4"
+                    android:padding="16dp">
 
                 <!-- First Box -->
                 <RelativeLayout
@@ -164,8 +266,10 @@
                         android:layout_marginTop="0dp"
                         android:background="@drawable/rounded_corner_shape"
                         android:clipToOutline="true"
+                        android:contentDescription="@string/product"
                         android:scaleType="fitXY"
-                        android:src="@drawable/sample_veg" />
+                        android:src="@drawable/sample_veg"
+                        tools:ignore="UnusedAttribute" />
 
                     <!-- Frame10 (Price Tag) -->
                     <TextView
@@ -174,12 +278,13 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="38dp"
                         android:layout_marginTop="84dp"
-                        android:backgroundTint="#42ad00"
                         android:background="@drawable/price_corner"
-                        android:text="Price"
+                        android:backgroundTint="#42ad00"
+                        android:gravity="center"
+                        android:text="@string/price"
                         android:textColor="#ffffff"
                         android:textSize="12sp"
-                        android:gravity="center"/>
+                        tools:ignore="TextSizeCheck,TextContrastCheck" />
                 </RelativeLayout>
 
                 <!-- Second Box -->
@@ -197,7 +302,9 @@
                         android:src="@drawable/sample_veg"
                         android:scaleType="fitXY"
                         android:clipToOutline="true"
-                        android:background="@drawable/rounded_corner_shape"/>
+                        android:contentDescription="@string/product"
+                        android:background="@drawable/rounded_corner_shape"
+                        tools:ignore="UnusedAttribute" />
 
                     <TextView
                         android:layout_width="38dp"
@@ -205,12 +312,13 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="38dp"
                         android:layout_marginTop="84dp"
-                        android:backgroundTint="#42ad00"
                         android:background="@drawable/price_corner"
-                        android:text="Price"
+                        android:backgroundTint="#42ad00"
+                        android:gravity="center"
+                        android:text="@string/price"
                         android:textColor="#ffffff"
                         android:textSize="12sp"
-                        android:gravity="center"/>
+                        tools:ignore="TextSizeCheck,TextContrastCheck" />
                 </RelativeLayout>
 
                 <!-- Third Box -->
@@ -228,7 +336,9 @@
                         android:src="@drawable/sample_veg"
                         android:scaleType="fitXY"
                         android:clipToOutline="true"
-                        android:background="@drawable/rounded_corner_shape"/>
+                        android:contentDescription="@string/product"
+                        android:background="@drawable/rounded_corner_shape"
+                        tools:ignore="UnusedAttribute" />
 
                     <TextView
                         android:layout_width="38dp"
@@ -236,12 +346,13 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="38dp"
                         android:layout_marginTop="84dp"
-                        android:backgroundTint="#42ad00"
                         android:background="@drawable/price_corner"
-                        android:text="Price"
+                        android:backgroundTint="#42ad00"
+                        android:gravity="center"
+                        android:text="@string/price"
                         android:textColor="#ffffff"
                         android:textSize="12sp"
-                        android:gravity="center"/>
+                        tools:ignore="TextSizeCheck,TextContrastCheck" />
                 </RelativeLayout>
 
                 <!-- Fourth Box -->
@@ -255,10 +366,12 @@
                         android:layout_width="76dp"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
-                        android:src="@drawable/sample_veg"
-                        android:scaleType="fitXY"
+                        android:background="@drawable/rounded_corner_shape"
                         android:clipToOutline="true"
-                        android:background="@drawable/rounded_corner_shape"/>
+                        android:contentDescription="@string/product"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/sample_veg"
+                        tools:ignore="UnusedAttribute,ImageContrastCheck" />
 
                     <TextView
                         android:layout_width="38dp"
@@ -266,12 +379,13 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginStart="38dp"
                         android:layout_marginTop="84dp"
-                        android:backgroundTint="#42ad00"
                         android:background="@drawable/price_corner"
-                        android:text="Price"
-                        android:textColor="#ffffff"
+                        android:backgroundTint="#42ad00"
+                        android:gravity="center"
+                        android:text="@string/price"
+                        android:textColor="#263238"
                         android:textSize="12sp"
-                        android:gravity="center"/>
+                        tools:ignore="TextContrastCheck" />
                 </RelativeLayout>
             </LinearLayout>
             </HorizontalScrollView>
@@ -283,12 +397,9 @@
                 android:layout_height="150dp"
                 app:iss_auto_cycle="true"
                 app:iss_period="3000"
-                app:iss_placeholder="@color/buyer_color"
                 app:iss_error_image="@color/buyer_color"
                 app:iss_corner_radius="20"
                 android:layout_margin="16dp">
-
-
             </com.denzcoskun.imageslider.ImageSlider>
 
             <!--Recommended Text-->
@@ -315,43 +426,48 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:paddingTop="16dp">
+                    android:id="@+id/reco_products"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
 
                 <!-- First button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/product"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Second button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/product"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Third button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/product"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Fourth button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/product"
+                        tools:ignore="ImageContrastCheck" />
             </LinearLayout>
             </HorizontalScrollView>
 
@@ -383,43 +499,48 @@
                 android:scrollbars="none">
 
                 <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:paddingTop="16dp">
+                    android:id="@+id/farmer_profiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
 
                 <!-- First button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/farmer_profiles"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Second button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/farmer_profiles"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Third button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/farmer_profiles"
+                        tools:ignore="ImageContrastCheck" />
 
                 <!-- Fourth button -->
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="100dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/rounded_corner_shape"
-                    android:clipToOutline="true" />
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rounded_corner_shape"
+                        android:contentDescription="@string/farmer_profiles"
+                        tools:ignore="ImageContrastCheck" />
             </LinearLayout>
 
             </HorizontalScrollView>

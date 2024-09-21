@@ -28,7 +28,7 @@ class LogIn : AppCompatActivity() {
         val loginBtn: Button = findViewById(R.id.login_button)
         val signUpText: TextView = findViewById(R.id.signup_text)
 
-        // Set the onClickListener for the login button
+        // Set onClickListener for login button
         loginBtn.setOnClickListener {
             // Capture the entered username and password
             val username = emailInput.text.toString()
@@ -37,7 +37,7 @@ class LogIn : AppCompatActivity() {
             // (for testing purposes)
             Log.i("Login Info", "Username: $username, Password: $password")
 
-            // Navigate to the sign_in activity
+            // Navigate to sign_in activity
             val intent = Intent(this@LogIn, SignUp::class.java)
             startActivity(intent)
         }
