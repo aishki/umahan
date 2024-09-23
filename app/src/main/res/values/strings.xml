@@ -48,6 +48,7 @@
     <!-- Home Screen Sections -->
     <string name="reco_products">recommended_products</string>
     <string name="recommended">Recommended</string>
+    <string name="featured">Featured</string>
     <string name="my_orders">My Orders</string>
     <string name="featured_products">featured products\n</string>
     <string name="product_category">product category\n</string>
@@ -68,4 +69,17 @@
     <string name="seeds_n_beans">Seeds n\' Beans</string>
     <string name="spices">Spices</string>
     <string name="bundle">Bundle</string>
+
+<!--Bpttpm Nav Bar Names-->
+    <string name="profile_nav">Profile</string>
+    <string name="cart_nav">Cart</string>
+    <string name="home_nav">Home</string>
+    <string name="my_orders_nav">My Orders</string>
+    <string name="chat_nav">Chat</string>
+
+<!--My Orders Button-->
+    <string name="active">Active</string>
+    <string name="completed">Completed</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="add_to_cart">Add To Cart</string>
 </resources>
