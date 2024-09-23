@@ -16,17 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
 
-
-// Iterate through the BottomNavigationView items
-        for (i in 0 until bottomNavigationView.childCount) {
-            val itemView = bottomNavigationView.getChildAt(i)
-
-            // Adjust the width of each item programmatically
-            val params = itemView.layoutParams as ViewGroup.LayoutParams
-            params.width = 500 // Set the desired width in pixels or convert dp to px
-            itemView.layoutParams = params
-        }
-
+        // Set the default selected item to "Home"
+        bottomNavigationView.selectedItemId = R.id.home
 
         if (savedInstanceState == null) {
             val userType = intent.getStringExtra("USER_TYPE")
@@ -46,6 +37,14 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
+                R.id.profile -> {
+                    // loadFragment(BuyerProfileFragment())
+                    true
+                }
+                R.id.cart -> {
+                    // loadFragment(BuyerCartFragment())
+                    true
+                }
                 R.id.home -> {
                     loadFragment(BuyerHomeFragment())
                     true
@@ -54,16 +53,8 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(BuyerMyOrdersFragment())
                     true
                 }
-                R.id.profile -> {
-                    // loadFragment(BuyerProfileFragment())
-                    true
-                }
                 R.id.chat -> {
                     // loadFragment(BuyerChatFragment())
-                    true
-                }
-                R.id.cart -> {
-                    // loadFragment(BuyerCartFragment())
                     true
                 }
                 else -> false

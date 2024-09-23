@@ -72,8 +72,8 @@
 
                         <ImageView
                             android:id="@+id/categoryAImageView"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/category_a"
                             android:scaleType="centerCrop"/>
 
@@ -81,7 +81,6 @@
                             android:id="@+id/categoryATextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
                             android:text="@string/fruits"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
@@ -97,8 +96,8 @@
 
                         <ImageView
                             android:id="@+id/categoryBImageView"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/category_b"
                             android:scaleType="centerCrop"/>
 
@@ -106,7 +105,6 @@
                             android:id="@+id/categoryBTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
                             android:text="@string/vegetables"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
@@ -122,8 +120,8 @@
 
                         <ImageView
                             android:id="@+id/categoryCImageView"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/category_c"
                             android:scaleType="centerCrop"/>
 
@@ -131,7 +129,6 @@
                             android:id="@+id/categoryCTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
                             android:text="@string/seeds_n_beans"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
@@ -147,8 +144,8 @@
 
                         <ImageView
                             android:id="@+id/categoryDImageView"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/category_d"
                             android:scaleType="centerCrop"/>
 
@@ -156,7 +153,6 @@
                             android:id="@+id/categoryDTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
                             android:text="@string/spices"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
@@ -171,8 +167,8 @@
 
                         <ImageView
                             android:id="@+id/categoryEImageView"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:contentDescription="@string/category_e"
                             android:scaleType="centerCrop"/>
 
@@ -180,7 +176,6 @@
                             android:id="@+id/categoryETextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
                             android:text="@string/bundle"
                             android:textSize="13sp"
                             android:textColor="@android:color/black"/>
@@ -209,7 +204,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/recommended"
+                    android:text="@string/featured"
                     android:fontFamily="@font/league_spartan_bold"
                     android:textColor="#391713"
                     android:textSize="18sp" />

@@ -2,30 +2,25 @@
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_profile"
-        android:layout_margin="10dp"
-        android:title="Profile" />
+        android:title="@string/profile_nav" />
 
     <item
         android:id="@+id/cart"
         android:icon="@drawable/ic_cart"
-        android:layout_margin="10dp"
-        android:title="Cart" />
+        android:title="@string/cart_nav" />
 
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home"
-        android:layout_margin="10dp"
-        android:title="Home" />
+        android:title="@string/home_nav" />
 
     <item
         android:id="@+id/my_orders"
         android:icon="@drawable/ic_my_orders"
-        android:layout_margin="10dp"
-        android:title="My Orders" />
+        android:title="@string/my_orders_nav" />
 
     <item
         android:id="@+id/chat"
         android:icon="@drawable/ic_msg"
-        android:layout_margin="10dp"
-        android:title="Chat" />
+        android:title="@string/chat_nav" />
 </menu>
