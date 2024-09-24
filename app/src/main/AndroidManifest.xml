@@ -33,7 +33,7 @@
 
         <activity android:name=".BuyerHomeActivity"
             android:exported="false" />
-        <activity android:name=".FarmerHome"
+        <activity android:name=".FarmerHomeActivity"
             android:exported="false" />
     </application>
 
