@@ -57,8 +57,8 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
 
     // Glide image loading library
-    implementation("com.github.bumptech.glide:glide:4.12.0")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
 
     // Supabase for Kotlin
     implementation("io.github.jan-tennert.supabase:postgrest-kt:0.7.6")

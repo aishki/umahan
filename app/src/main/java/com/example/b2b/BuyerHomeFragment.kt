@@ -73,7 +73,6 @@ class BuyerHomeFragment : Fragment() {
     // Set up image slider
         val imageSlider = view.findViewById<ImageSlider>(R.id.featuredslider)
         val slideModels = mutableListOf<SlideModel>()
-        slideModels.add(SlideModel(R.drawable.backup, ScaleTypes.CENTER_CROP))
         slideModels.add(SlideModel("https://cdn.britannica.com/39/187439-050-35BA4DCA/Broccoli-florets.jpg", ScaleTypes.CENTER_CROP))
         slideModels.add(SlideModel("https://www.acs.edu.au/database/images/course_2892908.jpg", ScaleTypes.CENTER_CROP))
         slideModels.add(SlideModel("https://extension.unh.edu/sites/default/files/styles/landscape_480x192/public/media/2021-02/fruit-and-vegetable-crops_0.jpg?h=7961609c&itok=zeTgG2RK", ScaleTypes.CENTER_CROP))
