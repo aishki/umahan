@@ -36,37 +36,37 @@ class BuyerMyOrdersFragment : Fragment() {
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productAImageView)
 
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productBImageView)
 
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productCImageView)
 
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productDImageView)
 
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productEImageView)
 
         // Load images using Glide
         Glide.with(this)
             .load("https://github.com/user-attachments/assets/dbe5d9b3-a377-437f-92f2-b1a5bf484a88")
-            .placeholder(R.drawable.rounded_corner_shape)
+            .placeholder(R.drawable.placeholder)
             .into(productFImageView)
         return view
     }

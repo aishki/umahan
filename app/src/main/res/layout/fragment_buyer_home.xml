@@ -236,13 +236,10 @@
 
                 <LinearLayout
                     android:id="@+id/featured_products"
-                    android:layout_width="336dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:baselineAligned="false"
                     android:orientation="horizontal"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:weightSum="4"
                     android:padding="16dp">
 
                 <!-- First Box -->
@@ -252,19 +249,19 @@
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1">
 
+
                     <!-- Image inside the box -->
                     <ImageView
-                        android:id="@+id/imageView1"
-                        android:layout_width="match_parent"
+                        android:id="@+id/featured_product1"
+                        android:layout_width="76dp"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
-                        android:layout_marginTop="0dp"
-                        android:background="@drawable/rounded_corner_shape"
+                        android:scaleType="centerCrop"
                         android:clipToOutline="true"
                         android:contentDescription="@string/product"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/sample_veg"
-                        tools:ignore="UnusedAttribute" />
+                        android:background="@drawable/rounded_corner_shape"
+                        tools:ignore="UnusedAttribute"
+                        />
 
                     <!-- Frame10 (Price Tag) -->
                     <TextView
@@ -290,12 +287,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView2"
+                        android:id="@+id/featured_product2"
                         android:layout_width="76dp"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
-                        android:src="@drawable/sample_veg"
-                        android:scaleType="fitXY"
+                        android:scaleType="centerCrop"
                         android:clipToOutline="true"
                         android:contentDescription="@string/product"
                         android:background="@drawable/rounded_corner_shape"
@@ -324,12 +320,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/featured_product3"
                         android:layout_width="76dp"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
-                        android:src="@drawable/sample_veg"
-                        android:scaleType="fitXY"
+                        android:scaleType="centerCrop"
                         android:clipToOutline="true"
                         android:contentDescription="@string/product"
                         android:background="@drawable/rounded_corner_shape"
@@ -357,15 +352,14 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/featured_product4"
                         android:layout_width="76dp"
                         android:layout_height="99dp"
                         android:layout_alignParentTop="true"
                         android:background="@drawable/rounded_corner_shape"
                         android:clipToOutline="true"
                         android:contentDescription="@string/product"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/sample_veg"
+                        android:scaleType="centerCrop"
                         tools:ignore="UnusedAttribute,ImageContrastCheck" />
 
                     <TextView
@@ -378,7 +372,7 @@
                         android:backgroundTint="#42ad00"
                         android:gravity="center"
                         android:text="@string/price"
-                        android:textColor="#263238"
+                        android:textColor="#ffffff"
                         android:textSize="12sp"
                         tools:ignore="TextContrastCheck" />
                 </RelativeLayout>
