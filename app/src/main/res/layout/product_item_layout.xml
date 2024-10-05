@@ -1,0 +1,112 @@
+<!-- Product Box -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/product_rounded_background_with_border"
+    android:orientation="vertical"
+    android:paddingVertical="15dp"
+    android:paddingHorizontal="12dp"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/product_rounded_background_with_border"
+        android:clipToOutline="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="3dp">
+
+        <!-- Product Text -->
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carrots and Stuff"
+            android:textColor="@android:color/black"
+            android:textSize="15.47sp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+        />
+
+        <!-- Flex space between -->
+        <View android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- (Rating) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="6dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_orange_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5.0"
+                android:textColor="@color/white"
+                android:textSize="9sp" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/product"
+                android:src="@drawable/shaded_star" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- By Farmer Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="By Chico Hyameru"
+        android:textColor="@android:color/black"
+        android:layout_gravity="left"
+        android:textSize="9.45sp" />
+
+    <!-- Price Text -->
+    <TextView
+        android:id="@+id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₱90.00 Per Kg"
+        android:textColor="@color/orange"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:textSize="10.31sp" />
+
+    <!-- Add To Cart Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/reg_radio_button_background"
+        android:paddingHorizontal="8.595dp"
+        android:paddingVertical="6dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add To Cart"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="9.5sp" />
+    </LinearLayout>
+</LinearLayout>

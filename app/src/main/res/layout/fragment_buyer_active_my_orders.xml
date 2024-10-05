@@ -155,6 +155,7 @@
 
                                 <!-- Product Text -->
                                 <TextView
+                                    android:id="@+id/product_name"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Carrots"
@@ -206,6 +207,7 @@
 
                             <!-- Price Text -->
                             <TextView
+                                android:id="@+id/product_price"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="₱90.00 Per Kg"
