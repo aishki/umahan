@@ -57,7 +57,6 @@ class BuyerHomeFragment : Fragment() {
         Product("Upo (Calabash)", "₱40/kg", "https://github.com/user-attachments/assets/c3e3744a-dacb-495d-9108-6b4b8e6e4e52"),
         Product("Ampalaya (Bitter Melon)", "₱90/kg", "https://github.com/user-attachments/assets/f942d6fe-451d-4ddf-b074-06d3e99c8266"),
         Product("String Beans (Sitaw)", "₱60/kg", "https://github.com/user-attachments/assets/af5ccb2b-077b-401e-acba-acaedb433f08"),
-        Product("Okra", "₱50/kg", "https://github.com/user-attachments/assets/e50d156a-e9bf-486a-9fd2-24434558c088")
     )
 
     private val grainsBeansProducts = listOf(

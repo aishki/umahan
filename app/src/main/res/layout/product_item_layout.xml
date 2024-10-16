@@ -1,6 +1,7 @@
 <!-- Product Box -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:maxWidth="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="1"
     android:background="@drawable/product_rounded_background_with_border"
@@ -27,22 +28,22 @@
         <!-- Product Text -->
         <TextView
             android:id="@+id/product_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Carrots and Stuff"
             android:textColor="@android:color/black"
-            android:textSize="15.47sp"
+            android:textSize="13sp"
             android:gravity="center"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
             android:maxLines="1"
             android:ellipsize="end"
+            android:layout_weight="1"
         />
 
         <!-- Flex space between -->
         <View android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="0.5" />
 
         <!-- (Rating) -->
         <LinearLayout
@@ -77,18 +78,18 @@
         android:text="By Chico Hyameru"
         android:textColor="@android:color/black"
         android:layout_gravity="left"
-        android:textSize="9.45sp" />
+        android:textSize="9sp" />
 
     <!-- Price Text -->
     <TextView
         android:id="@+id/product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="₱90.00 Per Kg"
+        android:text="₱90.00 /Kg"
         android:textColor="@color/orange"
         android:layout_gravity="left"
         android:layout_marginTop="10dp"
-        android:textSize="10.31sp" />
+        android:textSize="10sp" />
 
     <!-- Add To Cart Button -->
     <LinearLayout
