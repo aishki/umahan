@@ -82,4 +82,9 @@
     <string name="completed">Completed</string>
     <string name="cancelled">Cancelled</string>
     <string name="add_to_cart">Add To Cart</string>
+
+    <string name="by_farmer">By %1$s</string>
+    <string name="price_per_kg">₱%1$d /kg</string>
+    <string name="not_delivered">Not Delivered</string>
+
 </resources>
