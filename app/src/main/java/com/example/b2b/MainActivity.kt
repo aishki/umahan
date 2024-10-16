@@ -2,9 +2,9 @@ package com.example.b2b
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.ViewGroup
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import io.github.jan.supabase.createSupabaseClient
@@ -18,10 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val bottomNavigationBuyer = findViewById<BottomNavigationView>(R.id.bottom_navigation_buyer)
+        val bottomNavigationFarmer = findViewById<BottomNavigationView>(R.id.bottom_navigation_farmer)
 
         // Set the default selected item to "Home"
-        bottomNavigationView.selectedItemId = R.id.home
+        bottomNavigationBuyer.selectedItemId = R.id.home
+
+        // Set the default selected item to "Home"
+        bottomNavigationFarmer.selectedItemId = R.id.farmer_home
 
         // Get userType from intent
         userType = intent.getStringExtra("USER_TYPE").orEmpty()
@@ -35,34 +39,85 @@ class MainActivity : AppCompatActivity() {
             if (savedInstanceState == null) {
                 loadInitialFragment(userType)
             }
+
+            // Show the appropriate navigation view
+            when (userType) {
+                "buyer" -> {
+                    bottomNavigationBuyer.visibility = View.VISIBLE
+                    bottomNavigationFarmer.visibility = View.GONE
+                }
+                "farmer" -> {
+                    bottomNavigationFarmer.visibility = View.VISIBLE
+                    bottomNavigationBuyer.visibility = View.GONE
+                }
+                else -> {
+                    // Default to buyer if user type is unknown
+                    bottomNavigationBuyer.visibility = View.VISIBLE
+                    bottomNavigationFarmer.visibility = View.GONE
+                }
+            }
         }
 
-        bottomNavigationView.setOnItemSelectedListener { item ->
+        // Set up the listeners for the navigation views
+        bottomNavigationBuyer.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.profile -> {
-                    loadFragment(getFragmentByType("profile"))
+//                    loadFragment(BuyerProfileFragment())
                     true
                 }
                 R.id.cart -> {
-                    loadFragment(getFragmentByType("cart"))
+//                    loadFragment(BuyerCartFragment())
                     true
                 }
                 R.id.home -> {
-                    loadFragment(getFragmentByType("home"))
+                    loadFragment(BuyerHomeFragment())
                     true
                 }
                 R.id.my_orders -> {
-                    loadFragment(getFragmentByType("my_orders"))
+                    loadFragment(BuyerMyOrdersFragment())
                     true
                 }
                 R.id.chat -> {
-                    loadFragment(getFragmentByType("chat"))
+//                    loadFragment(BuyerChatFragment())
+                    true
+                }
+                else -> false
+            }
+        }
+
+        bottomNavigationFarmer.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.mga_orders -> {
+                    bottomNavigationFarmer.itemBackground = ContextCompat.getDrawable(this, R.drawable.nav_item_bg_farmer_orders_selector)
+//                    loadFragment(FarmerMgaOrdersFragment())
+                    true
+                }
+                R.id.akon_baligya -> {
+                    bottomNavigationFarmer.itemBackground =  ContextCompat.getDrawable(this, R.drawable.nav_item_bg_farmer_akon_baligya_selector)
+//                    loadFragment(FarmerAkonBaligyaFragment())
+
+                    true
+                }
+                R.id.farmer_home -> {
+                    bottomNavigationFarmer.itemBackground = ContextCompat.getDrawable(this, R.drawable.nav_item_background_selector)
+                    loadFragment(FarmerHomeFragment())
+                    true
+                }
+                R.id.farmer_profile -> {
+                    bottomNavigationFarmer.itemBackground =  ContextCompat.getDrawable(this, R.drawable.nav_item_bg_farmer_profile_selector)
+//                    loadFragment(FarmerProfileFragment())
+                    true
+                }
+                R.id.chat -> {
+                    bottomNavigationFarmer.itemBackground =  ContextCompat.getDrawable(this, R.drawable.nav_item_bg_farmer_chat_selector)
+//                    loadFragment(FarmerChatsFragment())
                     true
                 }
                 else -> false
             }
         }
     }
+
 
     // Method to load the initial fragment based on user type
     private fun loadInitialFragment(userType: String) {
@@ -72,29 +127,6 @@ class MainActivity : AppCompatActivity() {
             else -> BuyerHomeFragment() // Default to buyer
         }
         loadFragment(initialFragment)
-    }
-
-    // Method to get the correct fragment based on user type and the selected item
-    private fun getFragmentByType(fragmentType: String): Fragment {
-        return when (userType) {
-            "buyer" -> when (fragmentType) {
-//                "profile" -> BuyerProfileFragment()
-//                "cart" -> BuyerCartFragment()
-                "home" -> BuyerHomeFragment()
-                "my_orders" -> BuyerMyOrdersFragment()
-//                "chat" -> BuyerChatFragment()
-                else -> BuyerHomeFragment()
-            }
-            "farmer" -> when (fragmentType) {
-//                "profile" -> FarmerProfileFragment()
-//                "cart" -> FarmerCartFragment()
-                "home" -> FarmerHomeFragment()
-//                "my_orders" -> FarmerMyOrdersFragment()
-//                "chat" -> FarmerChatFragment()
-                else -> FarmerHomeFragment()
-            }
-            else -> BuyerHomeFragment() // Default to buyer
-        }
     }
 
     // Method to load fragments into the container

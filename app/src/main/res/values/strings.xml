@@ -86,5 +86,8 @@
     <string name="by_farmer">By %1$s</string>
     <string name="price_per_kg">₱%1$d /kg</string>
     <string name="not_delivered">Not Delivered</string>
+    <string name="mga_orders">Mga Orders</string>
+    <string name="akon_baligya">Akon Baligya</string>
+    <string name="umahan_logo">Umahan Logo</string>
 
 </resources>

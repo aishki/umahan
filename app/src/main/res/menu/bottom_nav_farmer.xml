@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mga_orders"
+        android:icon="@drawable/ic_farmer_orders_colored"
+        android:title="@string/mga_orders" />
+
+    <item
+        android:id="@+id/akon_baligya"
+        android:icon="@drawable/ic_farmer_baligya_colored"
+        android:title="@string/akon_baligya" />
+
+    <item
+        android:id="@+id/farmer_home"
+        android:icon="@drawable/ic_nav_logo"
+        android:title="@string/home_nav" />
+
+    <item
+        android:id="@+id/farmer_profile"
+        android:icon="@drawable/ic_farmer_profile_colored"
+        android:title="@string/profile_nav" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_farmer_chat_colored"
+        android:title="@string/chat_nav" />
+</menu>

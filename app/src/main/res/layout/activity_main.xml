@@ -5,23 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- WebView to display the HTML -->
-<!--    <WebView-->
-<!--        android:id="@+id/tree_webview"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_centerInParent="true" />-->
-
     <!-- Fragment Container -->
     <FrameLayout
         android:id="@+id/nav_host_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_navigation"/> <!-- Initially hidden -->
+        android:layout_above="@+id/bottom_navigation_buyer" />
 
-    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation for Buyer -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bottom_navigation_buyer"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
@@ -31,8 +24,23 @@
         android:theme="@style/BottomNavigationViewNoTheme"
         app:itemIconSize="20dp"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu"
-        app:itemIconTint="@null"
-        app:itemBackground="@drawable/nav_item_background_selector" />
+        app:menu="@menu/bottom_nav_buyer"
+        app:itemBackground="@drawable/nav_item_background_selector"
+        android:visibility="gone" /> <!-- Initially hidden -->
+
+    <!-- Bottom Navigation for Farmer -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_farmer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="5dp"
+        android:background="@drawable/nav_rounded_bg"
+        android:clipToOutline="true"
+        android:theme="@style/BottomNavigationViewNoTheme"
+        app:itemIconSize="20dp"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_farmer"
+        android:visibility="gone" /> <!-- Initially hidden -->
 
 </RelativeLayout>
