@@ -1,0 +1,205 @@
+<!-- Order Box -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/product_rounded_background_with_border"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="15dp"
+    >
+
+    <ImageView
+        android:id="@+id/order_image"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/product_rounded_background_with_border"
+        android:clipToOutline="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+        <!-- Product Text -->
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Carrots and Stuff"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/league_spartan_reg"
+            />
+
+<!--Farmer Name-->
+        <TextView
+            android:id="@+id/order_farmer_name"
+            android:fontFamily="@font/league_spartan_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="By Chico Hyameru"
+            android:textColor="@android:color/black"
+            android:textSize="9.45sp" />
+
+        <!--Total Product-->
+        <TextView
+            android:fontFamily="@font/league_spartan_reg"
+            android:id="@+id/order_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="10dp"
+            android:text="₱90.00 Per Kg"
+            android:textColor="@color/orange"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/green_check"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/back_button"
+                android:src="@drawable/ic_green_check" />
+
+            <TextView
+                android:fontFamily="@font/league_spartan_reg"
+                android:id="@+id/order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:text="Ordered"
+                android:textColor="@color/darkgreen"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+<!--        DATE DELIVERED-->
+        <TextView
+            android:fontFamily="@font/league_spartan_reg"
+            android:id="@+id/order_delivered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="December 69, 4444"
+            android:textColor="@color/lightgreen"
+            android:textSize="11sp" />
+        <!--Status-->
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="1.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/lightgreen"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+<!--    Date Ordered-->
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Ordered"
+        android:textColor="@color/darkgreen"
+        android:textSize="11sp" />
+
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="December 28, 2024"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <!--    Quantity Ordered-->
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_quantity_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Quantity"
+        android:textColor="@color/darkgreen"
+        android:textSize="11sp" />
+
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="697 kilos"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <!--    Mode of Payment-->
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_mode_of_payment_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Mode of Payment"
+        android:textColor="@color/darkgreen"
+        android:textSize="11sp" />
+
+    <TextView
+        android:fontFamily="@font/league_spartan_reg"
+        android:id="@+id/order_mode_of_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GCASH"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <!-- Add To Cart Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/reg_radio_button_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8.595dp"
+        android:paddingVertical="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Order Again"
+            android:textColor="@android:color/white"
+            android:textSize="9.5sp" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

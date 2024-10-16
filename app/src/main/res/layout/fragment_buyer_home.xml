@@ -195,14 +195,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/productsLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:baselineAligned="false"
-            android:orientation="vertical">
-        </LinearLayout>
-    </ScrollView>
+            <LinearLayout
+                android:id="@+id/productsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+            </LinearLayout>
+
+        </ScrollView>
 
 v
 
@@ -438,6 +439,7 @@ v
 
                 <!-- First button -->
                     <ImageView
+                        android:id="@+id/reco_product1"
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="10dp"
@@ -447,6 +449,7 @@ v
 
                 <!-- Second button -->
                     <ImageView
+                        android:id="@+id/reco_product2"
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="10dp"
@@ -456,6 +459,7 @@ v
 
                 <!-- Third button -->
                     <ImageView
+                        android:id="@+id/reco_product3"
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="10dp"
@@ -465,6 +469,7 @@ v
 
                 <!-- Fourth button -->
                     <ImageView
+                        android:id="@+id/reco_product4"
                         android:layout_width="80dp"
                         android:layout_height="100dp"
                         android:layout_marginEnd="10dp"
