@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import java.util.Date
 
 class BuyerHomeFragment : Fragment() {
 
@@ -87,7 +88,7 @@ class BuyerHomeFragment : Fragment() {
         categoryE = view.findViewById(R.id.categoryEImageView)
         productsLayout = view.findViewById(R.id.productsLayout)
 
-        // Set up category click listeners
+        // category click listeners
         categoryA.setOnClickListener { setActiveCategory("A") }
         categoryB.setOnClickListener { setActiveCategory("B") }
         categoryC.setOnClickListener { setActiveCategory("C") }
@@ -102,6 +103,9 @@ class BuyerHomeFragment : Fragment() {
 
         // Load featured product images
         loadFeaturedProducts(view)
+
+        // Load featured product images
+        loadRecommendedProducts(view)
 
         // Initialize with default category
 //        setActiveCategory("A")
@@ -165,15 +169,42 @@ class BuyerHomeFragment : Fragment() {
             .into(featuredProduct4)
     }
 
+    private fun loadRecommendedProducts(view: View) {
+        val recoProduct1: ImageView = view.findViewById(R.id.reco_product1)
+        val recoProduct2: ImageView = view.findViewById(R.id.reco_product2)
+        val recoProduct3: ImageView = view.findViewById(R.id.reco_product3)
+        val recoProduct4: ImageView = view.findViewById(R.id.reco_product4)
+
+        Glide.with(this)
+            .load("https://github.com/user-attachments/assets/e8157211-7d55-4fbb-af45-10b48cda8b10")
+            .placeholder(R.drawable.placeholder)
+            .into(recoProduct1)
+
+        Glide.with(this)
+            .load("https://github.com/user-attachments/assets/488835df-bf2b-4f3b-9758-2ad2fc2cb13d")
+            .placeholder(R.drawable.placeholder)
+            .into(recoProduct2)
+
+        Glide.with(this)
+            .load("https://github.com/user-attachments/assets/a7ca1abe-9adc-4417-b03f-a22bda457c3b")
+            .placeholder(R.drawable.placeholder)
+            .into(recoProduct3)
+
+        Glide.with(this)
+            .load("https://github.com/user-attachments/assets/a2ac0319-faab-426a-bb35-477d719ec6c1")
+            .placeholder(R.drawable.placeholder)
+            .into(recoProduct4)
+    }
+
     private fun setActiveCategory(category: String) {
         resetCategoryBackgrounds()
 
         when (category) {
             "A" -> categoryA.setBackgroundResource(R.drawable.active_category)
             "B" -> categoryB.setBackgroundResource(R.drawable.active_category)
-            "C" -> categoryC.setBackgroundResource(R.drawable.rounded_green_button)
-            "D" -> categoryD.setBackgroundResource(R.drawable.rounded_green_button)
-            "E" -> categoryE.setBackgroundResource(R.drawable.rounded_green_button)
+            "C" -> categoryC.setBackgroundResource(R.drawable.active_category)
+            "D" -> categoryD.setBackgroundResource(R.drawable.active_category)
+            "E" -> categoryE.setBackgroundResource(R.drawable.active_category)
         }
 
         // Update product layout
@@ -252,6 +283,4 @@ class BuyerHomeFragment : Fragment() {
         Log.d("ProductList", "Total views added: ${productsLayout.childCount}")
         Log.d("ProductsLayout", "Height after adding products: ${productsLayout.height}")
     }
-
-
 }
