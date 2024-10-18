@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background color with rounded corners -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF7DE" />
+            <corners android:radius="11dp" />
+        </shape>
+    </item>
+
+    <!-- Image layer (signin_bg.png) with rounded corners -->
+    <item android:top="0dp" android:bottom="0dp" android:left="0dp" android:right="0dp">
+        <bitmap
+            android:src="@drawable/signin_bg"
+            android:gravity="center" />
+    </item>
+
+</layer-list>
